@@ -1,0 +1,301 @@
+/* General Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #181a20;
+  color: #fff;
+  text-align: center;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent; /* Transparent background */
+  z-index: 10;
+  padding: 20px 30px;
+  transition: background-color 0.3s ease;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Footer Styles */
+.footer {
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: #16181D; /* Slightly darker shade for footer */
+  transition: background-color 0.3s ease;
+}
+
+/* Scrolling behavior for the header */
+.scrolled {
+  background-color: #181A20; /* Header becomes dark on scroll */
+}
+
+/* Responsive Styles for better mobile viewing */
+@media (max-width: 768px) {
+  .header-content {
+      flex-direction: column;
+  }
+
+  .navbar {
+      padding-top: 10px;
+  }
+
+  .nav-item {
+      padding: 10px;
+  }
+
+  .nav-item:not(:last-child)::after {
+      display: none; /* Remove dividers on smaller screens */
+  }
+}
+
+
+.login-button {
+   /* Binance yellow */
+  color: #ffffff; /* Dark color for text */
+  padding: 10px 20px;
+  border-radius: 10px; /* Oval shape */
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: auto; /* Pushes the login button to the far right */
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #fff; /* Lighter color on hover */
+  color: #181A20;
+  transform: scale(1.05); /* Slightly larger on hover */
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Use the full height of the viewport */
+  text-align: left;
+  padding-left: 15%;
+}
+
+/*Left Section begins here */
+
+.left-section::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 20px; /* Adjust space from the top */
+  bottom: 20px; /* Adjust space from the bottom */
+  width: 1px; /* Very thin line */
+  background-color: rgba(50, 50, 50, 0.5); /* Dark grey with transparency */
+  z-index: 10;
+}
+
+
+.section-separator {
+  width: 1px; /* very thin line */
+  height: calc(80% - 40px); /* Assuming you want some space on top and bottom, adjust 40px as needed */
+  background-color: rgba(128, 128, 128, 0.5); /* slightly transparent dark grey */
+  position: absolute;
+  left: 347px;
+  top: 104px; /* This ensures the space at the top is half of the total space you want to leave */
+}
+
+.section-separator2 {
+  width: 1px; /* very thin line */
+  height: calc(80% - 40px); /* Assuming you want some space on top and bottom, adjust 40px as needed */
+  background-color: rgba(128, 128, 128, 0.5); /* slightly transparent dark grey */
+  position: absolute;
+  right: 193px;
+  top: 104px; /* This ensures the space at the top is half of the total space you want to leave */
+}
+
+#spriteContainer {
+  width: 450px; /* Set your desired width */
+  height: 450px; /* Set your desired height */
+  background-size: contain; /* This ensures the image fits within the container */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image in the container */
+  margin-top: 84px;
+  margin-left: -58px;
+  position: absolute;
+
+}
+
+
+.middle-square {
+  background-color: #202229;
+  width: 200px; /* Adjust width as needed */
+  height: 200px; /* Adjust height as needed */
+  margin-top: 50px; /* Adjust top margin as needed */
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px; /* This makes the edges not sharp */
+}
+#container {
+  position: relative;
+  height: 500px;  // Example height, adjust based on your actual layout needs
+}
+
+#spriteContainer {
+  position: absolute;
+  top: 20px;  // Adjust according to your layout
+  left: 20px;  // Adjust according to your layout
+  width: 200px;  // Example size
+  height: 200px;  // Example size
+}
+
+#greySquare {
+  position: absolute;
+  top: 20px;  // Adjust this to not overlap with spriteContainer if needed
+  left: 250px;  // Adjust this to place it correctly in the visible area
+  width: 150px;  // Adjustable
+  height: 150px;  // Adjustable
+  background-color: #202229;
+  border-radius: 15px;
+}
+#container #greySquare {
+  position: absolute !important;
+  top: 113px !important;
+  left: 16px !important;
+  width: 318px !important;
+  height: 439px !important;
+  background-color: #21232b !important;
+  border-radius: 15px !important;
+}
+
+
+  
+/*Flip counter*/
+.statistics-container {
+  background: transparent; /* The grey background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Some spacing inside the container */
+  color: #ffffff; /* Text color */
+  width: fit-content; /* Adjust width to content */
+  margin: -255px auto;
+  margin-left: -370px; /* Centering the container */
+  /* Add your margin-top and margin-left as needed */
+}
+
+.statistic {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Spacing between items */
+}
+
+.stat-title {
+  margin-right: 10px; /* Spacing between title and value */
+  font-weight: bold; /* If you want the title bold */
+}
+
+.stat-value {
+  /* If you want to style the value differently, do it here */
+}
+/* Style for the "Buy" and "Sale" boxes */
+/* Style for the "Buy" and "Sale" boxes */
+/* Style for the "Buy" and "Sale" boxes */
+.buy-sale-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -400px;
+  display: flex;
+  flex-direction: row; /* Adjust top margin as needed */
+}
+
+.buy-box,
+.sale-box {
+  background-color: #202229;
+  width: 300px; /* Adjust width as needed */
+  height: auto; /* Adjust height as needed */
+  margin-top: 20px; /* Adjust top margin as needed */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px; /* Add padding for spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff; /* Text color */
+}
+
+.buy-box h2,
+.sale-box h2 {
+  margin: 0; /* Remove default margin */
+}
+
+input[type="number"],
+button {
+  width: 100%; /* Take full width of the box */
+  margin-top: 10px; /* Adjust top margin as needed */
+  padding: 10px; /* Add padding for spacing */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #ccc; /* Border style */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+button {
+  background-color: #f0b90b; /* Binance yellow */
+  color: #181A20; /* Dark color for text */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Cursor style */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+  background-color: #fff; /* Lighter color on hover */
+  color: #f0b90b; /* Binance yellow on hover */
+}
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #181a20;
+  color: #fff;
+  padding: 24px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure dashboard is above other content */
+}
+
+.navigation-links {
+  display: flex;
+}
+
+.navigation-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.navigation-links a:last-child {
+  margin-right: 10;
+}
+#map {
+  height: 330px; /* Keep the height as needed */
+  width: 45%; /* Adjust the width as needed */
+  margin: -257px auto;
+ float: right;
+ margin-right: 770px;
+
+}
+

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard Layout</title>
+        <link rel="stylesheet" href="dashboard.css">
+        <style>
+      </style>
+    </head>
+    <div class="container">
+        <div class="section-separator"></div> <!-- New section separator -->
+        <div class="section-separator2"></div> <!-- New section separator -->
+
+        
+    </head>
+    <div class="navigation">
+      <div class="navigation-links">
+          <div class="logo"><a href="#">PROJECT THE WATT PORTAL</a></div>
+          <ul>
+              <a href="dashboard.html">Dashboard</a>
+              <a href="buy-sale.html">Buy/Sale</a>
+              <a href="pre-funding.html">Pre-Funding</a>
+              <a href="faq.html">F.A.Q</a>
+              <a href="help.html">Help</a>
+          </ul>
+      </div>
+  </div>
+    
+    
+    <div id="container">
+        <div id="spriteContainer"></div>
+      </div>
+      
+   <body>
+    <style>
+        body {
+          background-image: url('blockchain.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+          background-color: #181A20;
+          background-color: rgb(0, 0, 0);
+          background-blend-mode: lighten;
+        }
+        </style>
+      
+   </body> 
+
+
+<div class="tradingview-widget-container">
+  <div id="tradingview_74048"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BITFINEX-IOTUSD/" rel="noopener" target="_blank"><span class="blue-text"></span></a> by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+  "autosize": true,
+  "symbol": "BINANCE:IOTAUSD",
+  "interval": "D",
+  "timezone": "Europe/Zurich",
+  "theme": "Dark",
+  "style": "1",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "hide_side_toolbar": false,
+  "allow_symbol_change": true,
+  "studies": [
+    "RSI@tv-basicstudies",
+    "StochasticRSI@tv-basicstudies"
+  ],
+  "container_id": "tradingview_74048"
+}
+  );
+  </script>
+ <style>
+  .tradingview-widget-container {
+    width: 52%; /* Adjusted width */
+    height: 135px; /* Ensure this is enough space */
+    margin: -375px auto 0 auto; /* Adjust top margin to push it up */
+    display: block; /* This should help center it horizontally */
+    background: #181A20; /* Background for visibility */
+    margin-left: 361px;
+  }
+</style>
+<div id="map"></div> <!-- Add the map container here -->
+        <div id="container">
+            <div id="spriteContainer"></div>
+        </div>
+        <div class="buy-sale-container">
+            <div class="buy-box">
+                <h2>Buy</h2>
+                <input type="number" placeholder="Amount to buy">
+                <input type="number" placeholder="Price per token">
+                <button>Place Order</button>
+            </div>
+            <div class="sale-box">
+                <h2>Sale</h2>
+                <input type="number" placeholder="Amount to sell">
+                <input type="number" placeholder="Price per token">
+                <button>Place Order</button>
+            </div>
+        </div>
+    <!-- Include the Google Maps API script -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWyIjZpgaI8i7t7GOXpXRh_BYhgM9ztXE&callback=initMap" async defer></script>
+    <script>
+        // Initialize the map
+        function initMap() {
+            var mapOptions = {
+              center: { lat: 39.9255, lng: 32.8660 }, // Turkey coordinates
+              zoom: 5, // Zoom level
+              styles: [
+                    // Dark mode map styles
+                    // Add your custom styles here
+                ]
+            };
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+            // Add markers for specific locations
+            var locations = [
+            { lat: 37.3803, lng: 27.2670, name: 'Didim - Türkiye' }, // Didim marker
+            { lat: 35.1856, lng: 33.3823, name: 'Lefkoşe - Kıbrıs' }, // Lefkoşe marker
+            { lat: 40.1553, lng: 26.4142, name: 'Çanakkale - Türkiye' }, // Çanakkale marker
+            { lat: 38.7007, lng: 26.1950, name: 'İzmir - Karaburun - Türkiye' }, // İzmir - Karaburun marker
+                // Add more locations as needed
+            ];
+
+            locations.forEach(function(location) {
+                var marker = new google.maps.Marker({
+                    position: { lat: location.lat, lng: location.lng },
+                    map: map,
+                    title: location.name
+                });
+            });
+        }
+    </script>
+</style>
+<div class="statistics-container">
+  <div class="statistic">
+    <span class="stat-title">TOTAL PLANT CAPACITY:</span>
+    <span class="stat-value">78 MegaWatt/h</span>
+  </div>
+  <div class="statistic">
+    <span class="stat-title">Total power Produced Since:</span>
+    <span class="stat-value">5500 GigaWatt</span>
+  </div>
+  <div class="statistic">
+    <span class="stat-title">Total Profit Gained Since:</span>
+    <span class="stat-value">660 Million $</span>
+  </div>
+  <!-- Repeat the structure above for each statistic -->
+</div>
+
+
+
+</div>
+</div>
+</div>
+    <script src="spin.js"></script>
+</html>

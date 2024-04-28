@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy/Sale</title>
+    <link rel="stylesheet" href="buy-sale-design.css">
+</head>
+<body>
+    <style>
+        body {
+          background-image: url('blockchain.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+          background-color: rgba(24,26,32, 1);
+          background-blend-mode: lighten;
+        }
+        </style>
+    <div class="dashboard">
+        <div class="dashboard-links">
+            <div class="logo"><a href="#">PROJECT THE WATT PORTAL</a></div>
+            <ul>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="buy-sale.html">Buy/Sale</a>
+                <a href="pre-funding.html">Pre-Funding</a>
+                <a href="faq.html">F.A.Q</a>
+                <a href="help.html">Help</a>
+            </ul>
+        </div>
+    </div>
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text"></span></a></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+        {
+        "symbols": [
+          {
+            "description": "",
+            "proName": "COINBASE:BTCUSD"
+          },
+          {
+            "description": "",
+            "proName": "COINBASE:ETHUSD"
+          },
+          {
+            "description": "",
+            "proName": "BINANCE:IOTAUSD"
+          }
+        ],
+        "colorTheme": "dark",
+        "isTransparent": false,
+        "locale": "en"
+      }
+        </script>
+      </div>
+      <div class="content">
+        <div class="center-content"> <!-- New container for centering -->
+            <h1>Sell Tokens</h1>
+            <div class="text">
+                <p>Discover seamless transactions with our platform, enabling swift and secure selling of over 100 tokens. Experience the ease of navigating through a diverse range of coins for instant transactions. Unlock opportunities to trade cryptocurrencies effortlessly with our intuitive interface. Seamlessly switch between buying and selling modes for a streamlined trading experience. Join our platform today to explore the dynamic world of cryptocurrency trading.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        <div class="buy-sell-input-box">
+            <div class="buy-sell-input">
+                <div class="buy-sell-box">
+                    <button id="buy-btn">Buy</button>
+                </div>
+                <div class="input-box">
+                    <div class="input-group">
+                        <label for="price">Price:</label>
+                        <input type="text" id="price" name="price" placeholder="Enter price">
+                    </div>
+                    <div class="input-group">
+                        <label for="amount">Amount:</label>
+                        <input type="text" id="amount" name="amount" placeholder="Enter amount">
+                    </div>
+                    <div class="input-group">
+                        <label for="total">Total:</label>
+                        <input type="text" id="total" name="total" placeholder="Calculated total" readonly>
+                    </div>
+                    <div class="input-group">
+                        <button id="amount">BUY BTC</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="buy-sell-input-box">
+            <div class="buy-sell-input">
+                <div class="buy-sell-box">
+                    <button id="sale-btn">Sale</button>
+                </div>
+                <div class="input-box">
+                    <div class="input-group">
+                        <label for="price">Price:</label>
+                        <input type="text" id="price" name="price" placeholder="Enter price">
+                    </div>
+                    <div class="input-group">
+                        <label for="amount">Amount:</label>
+                        <input type="text" id="amount" name="amount" placeholder="Enter amount">
+                    </div>
+                    <div class="input-group">
+                        <label for="total">Total:</label>
+                        <input type="text" id="total" name="total" placeholder="Calculated total" readonly>
+                    </div>
+                    <div class="input-group">
+                        <button id="amount">SELL BTC</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span class="footer_text">Copyright © 2024 All Rights Reserved.</span>
+    </div>
+</body>
+</html>
