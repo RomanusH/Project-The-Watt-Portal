@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help - Crypto Portal</title>
+  <link rel="stylesheet" href="help-design.css">
+  <script>
+    function showNotification() {
+      alert("Your message has been sent.");
+    }
+  </script>
+</head>
+<body>
+  <style>
+    body {
+      background-image: url('blockchain.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      background-color: rgba(24,26,32, 1);
+      background-blend-mode: lighten;
+    }
+    </style>
+  <div class="dashboard">
+    <div class="dashboard-links">
+        <div class="logo"><a href="#">PROJECT THE WATT PORTAL</a></div>
+        <ul>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="buy-sale.html">Buy/Sale</a>
+            <a href="pre-funding.html">Pre-Funding</a>
+            <a href="faq.html">F.A.Q</a>
+            <a href="help.html">Help</a>
+        </ul>
+    </div>
+</div>
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text"></span></a></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+    {
+    "symbols": [
+      {
+        "description": "",
+        "proName": "COINBASE:BTCUSD"
+      },
+      {
+        "description": "",
+        "proName": "COINBASE:ETHUSD"
+      },
+      {
+        "description": "",
+        "proName": "BINANCE:IOTAUSD"
+      }
+    ],
+    "colorTheme": "dark",
+    "isTransparent": false,
+    "locale": "en"
+  }
+    </script>
+  </div>
+
+<div class="container">
+  <header>
+    <h1>Need Help?</h1>
+  </header>
+
+  <section class="help-section">
+    <h2>Customer Support</h2>
+    <p>If you require immediate assistance, please contact our customer support team:</p>
+    <ul>
+      <li>Phone: 1-800-CRYPTO</li>
+      <li>Email: support@cryptoportal.com</li>
+    </ul>
+  </section>
+  <section class="help-section">
+    <h2>Contact Us</h2>
+    <p>If you still have questions or need further assistance, you can reach out to us using the form below:</p>
+    <div class="contact-form">
+      <form action="#" method="post" onsubmit="showNotification()">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+  <span class="footer_text">Copyright © 2024 All Rights Reserved.</span>
+</div>
+</body>
+</html>
